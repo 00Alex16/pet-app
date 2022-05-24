@@ -17,13 +17,17 @@ const CrearCuenta = (props) => {
   }
 
   const crearUsuario = () => {
+    let datosCompletos = true
     Object.entries(state).forEach(([key, value]) => {
       if (value == '') {
-        alert('Ingresa toda la información solicitada');
-        return;   // No está terminando la función al darse la alerta y hace la redirección
+        datosCompletos = false
       }
     })
-    props.navigation.navigate('Portada');
+    if (datosCompletos) {
+      props.navigation.navigate('Portada');
+    } else {
+      alert('Ingresa toda la información solicitada');
+    }
   }
 
   return (

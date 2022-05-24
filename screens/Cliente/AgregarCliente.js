@@ -20,11 +20,14 @@ const AgregarCliente = (props) => {
   const agregarCliente = () => {
     Object.entries(state).forEach(([key, value]) => {
       if (value == '') {
-        alert('Ingresa toda la información solicitada');
-        return;   // No está terminando la función al darse la alerta y hace la redirección
+        datosCompletos = false
       }
     })
-    props.navigation.navigate('Clientes');
+    if (datosCompletos) {
+      props.navigation.navigate('Clientes');
+    } else {
+      alert('Ingresa toda la información solicitada');
+    }
   }
 
   return (

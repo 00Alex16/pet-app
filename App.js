@@ -14,6 +14,7 @@ import Turnos from './screens/Turnos';
 import Recordatorios from './screens/Recordatorios';
 import Referencias from './screens/Referencias';
 import AgregarCliente from './screens/Cliente/AgregarCliente';
+import DetallesCliente from './screens/Cliente/DetallesCliente';
 
 function MyStack() {
   return (
@@ -27,6 +28,7 @@ function MyStack() {
       <Stack.Screen name='Recordatorios' component={Recordatorios}/>
       <Stack.Screen name='Referencias' component={Referencias}/>
       <Stack.Screen name='AgregarCliente' component={AgregarCliente}/>
+      <Stack.Screen name='DetallesCliente' component={DetallesCliente}/>
     </Stack.Navigator>
   )
 }
