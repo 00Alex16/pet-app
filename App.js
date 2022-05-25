@@ -19,7 +19,7 @@ import DetallesCliente from './screens/Cliente/DetallesCliente';
 function MyStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Portada' component={Portada}/>
+      <Stack.Screen name='Portada' component={Portada} options={{ title: 'My home', headerStyle: { backgroundColor: '#f4511e' },}}/>
       <Stack.Screen name='IniciarSesion' component={IniciarSesion}/>
       <Stack.Screen name='CrearCuenta' component={CrearCuenta}/>
       <Stack.Screen name='Inicio' component={Inicio}/>
@@ -44,7 +44,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
