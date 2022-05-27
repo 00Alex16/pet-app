@@ -8,7 +8,7 @@ const Inicio = (props) => {
         Página de inicio.
       </Text>
       <Button title='Clientes' onPress={() => props.navigation.navigate('Clientes')}/>
-      <Button title='Turnos' onPress={() => props.navigation.navigate('Turnos')}/>
+      <Button title='Calendario' onPress={() => props.navigation.navigate('Calendario')}/>
       <Button title='Recordatorios' onPress={() => props.navigation.navigate('Recordatorios')}/>
       <Button title='Referencias' onPress={() => props.navigation.navigate('Referencias')}/>
     </View>

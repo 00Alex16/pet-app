@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -15,6 +15,9 @@ import Recordatorios from './screens/Recordatorios';
 import Referencias from './screens/Referencias';
 import AgregarCliente from './screens/Cliente/AgregarCliente';
 import DetallesCliente from './screens/Cliente/DetallesCliente';
+import Calendario from './screens/Turnos/Calendario';
+
+//const uri = 'https://www.xtrafondos.com/wallpapers/resized/degradado-difuminado-verde-7936.jpg?s=large';
 
 function MyStack() {
   return (
@@ -29,6 +32,7 @@ function MyStack() {
       <Stack.Screen name='Referencias' component={Referencias}/>
       <Stack.Screen name='AgregarCliente' component={AgregarCliente}/>
       <Stack.Screen name='DetallesCliente' component={DetallesCliente}/>
+      <Stack.Screen name='Calendario' component={Calendario} />
     </Stack.Navigator>
   )
 }
@@ -36,7 +40,8 @@ function MyStack() {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyStack/>
+      <MyStack>
+      </MyStack>
     </NavigationContainer>
   );
 }
@@ -48,4 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  /* imagen:{
+    ...StyleSheet.absoluteFill,
+    width:'100%',
+    height:'100%',
+    resizeMode:'cover',
+  } */
 });

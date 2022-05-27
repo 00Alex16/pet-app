@@ -1,25 +1,32 @@
 import React from 'react';
-import { View, Button, StyleSheet, Text } from 'react-native';
-//import LinearGradient from 'react-native-linear-gradient';
+import { View, StyleSheet, Text } from 'react-native';
+import fondo from './img/fondo.jpg';
+import { BotonCrearCuenta, BotonIniciarSesion } from './components/BotonesPortada';
+//const uri = 'https://www.xtrafondos.com/wallpapers/resized/degradado-difuminado-verde-7936.jpg?s=large';
+
 
 const Portada = (props) => {
   return (
-    //<LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={{flex: 1}}>
-    <View>
-      <Button title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}/>
-      <Button title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}/>
-    </View>
-    //</LinearGradient>
-  )
+      <View style={styles.fondo}>
+        <Text>
+          Hola papus como estan espero que esten muy Bien 
+          que estan haciendo el dia de hoy 
+        </Text>
+        <BotonIniciarSesion style={styles.botones} title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}></BotonIniciarSesion>
+        <BotonCrearCuenta title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}></BotonCrearCuenta>
+      </View>
+  );
 }
 
 const styles = StyleSheet.create({
   fondo: {
-    backgroundColor: '#44CFCB',
-    flex: 1
+    backgroundColor: '#59d102',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-end'
   },
-  red : {
-    color: 'red'
+  botones:{
+    bottom:0
   }
 });
 
