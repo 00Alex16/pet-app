@@ -1,21 +1,26 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import fondo from './img/fondo.jpg';
 import { BotonCrearCuenta, BotonIniciarSesion } from './components/BotonesPortada';
-//const uri = 'https://www.xtrafondos.com/wallpapers/resized/degradado-difuminado-verde-7936.jpg?s=large';
-
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Portada = (props) => {
   return (
-      <View style={styles.fondo}>
+    <View style={styles.fondo}>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(0,0,0,0.8)', 'transparent']}
+        style={{position:'absolute',height: 300,left: 0,
+        right: 0,
+        top: 0,}}
+      />
         <Text>
           Hola papus como estan espero que esten muy Bien 
           que estan haciendo el dia de hoy 
         </Text>
         <BotonIniciarSesion style={styles.botones} title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}></BotonIniciarSesion>
         <BotonCrearCuenta title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}></BotonCrearCuenta>
-      </View>
-  );
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
