@@ -10,11 +10,13 @@ import IniciarSesion from './screens/IniciarSesion';
 import CrearCuenta from './screens/CrearCuenta';
 import Inicio from './screens/Inicio';
 import Clientes from './screens/Cliente/Clientes';
-import Turnos from './screens/Turnos';
+import Turnos from './screens/Turno/Turnos';
 import Recordatorios from './screens/Recordatorios';
 import Referencias from './screens/Referencias';
 import AgregarCliente from './screens/Cliente/AgregarCliente';
 import DetallesCliente from './screens/Cliente/DetallesCliente';
+import DetallesTurno from './screens/Turno/DetallesTurno';
+import CrearTurno from './screens/Turno/CrearTurno';
 
 function MyStack() {
   return (
@@ -29,6 +31,8 @@ function MyStack() {
       <Stack.Screen name='Referencias' component={Referencias}/>
       <Stack.Screen name='AgregarCliente' component={AgregarCliente}/>
       <Stack.Screen name='DetallesCliente' component={DetallesCliente}/>
+      <Stack.Screen name='DetallesTurno' component={DetallesTurno}/>
+      <Stack.Screen name='CrearTurno' component={CrearTurno}/>
     </Stack.Navigator>
   )
 }
