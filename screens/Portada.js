@@ -13,9 +13,13 @@ const Portada = (props) => {
         right: 0,
         top: 0,}}
       />
-        <Text>
-          Hola papus como estan espero que esten muy Bien 
-          que estan haciendo el dia de hoy 
+        <Text style={styles.textoName}>
+          Petapp
+        </Text>
+        <Text style={styles.texto} >
+          Petapp la mejor app de gestion veterinaria.
+          toda la informacion que necesitas al alcance de tu mano.
+          una app facil de usar, perfecta para ti
         </Text>
         <BotonIniciarSesion style={styles.botones} title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}></BotonIniciarSesion>
         <BotonCrearCuenta title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}></BotonCrearCuenta>
@@ -32,6 +36,19 @@ const styles = StyleSheet.create({
   },
   botones:{
     bottom:0
+  },
+  texto:{
+    alignSelf: 'center',
+    //fontFamily: 'sans-serif',
+    justifyContent: 'center',
+    width: '70%',
+  },
+  textoName:{
+    alignSelf:'center',
+    justifyContent: 'center',
+    fontWeight:'bold',
+    fontSize:'32',
+    width: '50%',
   }
 });
 
