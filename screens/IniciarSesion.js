@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
+import { BtnInicioSesion } from './components/BtnInicioSesion';
 
 const IniciarSesion = (props) => {
 
@@ -23,24 +24,35 @@ const IniciarSesion = (props) => {
   }
 
   return (
-    <View>
-      <TextInput 
+    <View style={styles.container}>
+      <TextInput style={styles.textos}
         placeholder='Correo electrónico'
         keyboardType='email-address'
         onChangeText={(value) => handleChangeText('correo', value)}
       />
-      <TextInput 
+      <TextInput style={styles.textos}
         placeholder='Contraseña'
         secureTextEntry={true}
         onChangeText={(value) => handleChangeText('password', value)}
       />
-      <Button title='Iniciar sesión' onPress={() => iniciarSesion()}/>
+      <BtnInicioSesion title='Iniciar sesión' onPress={() => iniciarSesion()}/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-
-  })
+  textos:{
+    height:40,
+    width: '70%',
+    margin:12,
+    borderBottomWidth: 1,
+    padding:20,
+  },
+  container:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    top: '30%',
+  }
+})
 
 export default IniciarSesion;

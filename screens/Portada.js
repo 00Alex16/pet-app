@@ -8,8 +8,8 @@ const Portada = (props) => {
     <View style={styles.fondo}>
       <LinearGradient
         // Background Linear Gradient
-        colors={['rgba(0,0,0,0.8)', 'transparent']}
-        style={{position:'absolute',height: 300,left: 0,
+        colors={['rgba(0,184,255,0.8)', 'transparent']}
+        style={{position:'absolute',height: '50%',left: 0,
         right: 0,
         top: 0,}}
       />
@@ -17,10 +17,14 @@ const Portada = (props) => {
           Petapp
         </Text>
         <Text style={styles.texto} >
-          Petapp la mejor app de gestion veterinaria.
-          toda la informacion que necesitas al alcance de tu mano.
-          una app facil de usar, perfecta para ti
+          Petapp la mejor app de gestion veterinaria
         </Text>
+        <Text style={styles.texto}>
+          toda tu informacion al alcance de tus manos, de manera facil y rapida
+        </Text>
+        {/* <Text style={styles.texto}>
+          Con Petapp ser veterinario nunca fue tan facil
+        </Text> */}
         <BotonIniciarSesion style={styles.botones} title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}></BotonIniciarSesion>
         <BotonCrearCuenta title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}></BotonCrearCuenta>
     </View>
@@ -29,26 +33,29 @@ const Portada = (props) => {
 
 const styles = StyleSheet.create({
   fondo: {
-    backgroundColor: '#59d102',
+    //backgroundColor: '#8CFF72',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    alignContent: 'center'
   },
   botones:{
     bottom:0
   },
   texto:{
     alignSelf: 'center',
-    //fontFamily: 'sans-serif',
+    fontFamily: 'sans-serif',
     justifyContent: 'center',
     width: '70%',
+    textAlign: 'center'
   },
   textoName:{
     alignSelf:'center',
+    textAlign: 'center',
     justifyContent: 'center',
     fontWeight:'bold',
-    fontSize:'32',
-    width: '50%',
+    width: '70%',
+    height: '5%'
   }
 });
 
