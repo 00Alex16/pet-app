@@ -91,7 +91,6 @@ const CrearCuenta = (props) => {
 
 const styles = StyleSheet.create({
   textos:{
-    height:30,
     width: 350,
     margin:12,
     borderBottomWidth: 1,
@@ -100,10 +99,11 @@ const styles = StyleSheet.create({
   container:{
     alignItems: 'center',
     justifyContent: 'center',
-    top: '10%',
+    //top: '10%',
   },
   boton:{
-    top: '20%',
+    top: 40,
+    marginBottom: 40
   }
 })
 

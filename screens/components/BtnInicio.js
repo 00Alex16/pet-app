@@ -85,19 +85,19 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     button1:{
-        backgroundColor:'#8ecae6',
+        backgroundColor: '#03CECE',//'#8ecae6',
         flex: 1
     },
     button2:{
-        backgroundColor:'#219ebc',
+        backgroundColor:'#03CECE',//'#219ebc'
         flex:1,
     },
     button3:{
-        backgroundColor:'#457b9d',
+        backgroundColor:'#03CECE', //'#457b9d',
         flex:1
     },
     button4:{
-        backgroundColor:'#023047',
+        backgroundColor: '#03CECE', //'#023047',
         flex:1
     },
 })

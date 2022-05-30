@@ -54,7 +54,6 @@ const IniciarSesion = (props) => {
 
 const styles = StyleSheet.create({
   textos:{
-    height:40,
     width: '70%',
     margin:12,
     borderBottomWidth: 1,
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     top: '40%',
   },
   btn:{
-    marginTop: '50%',
+    marginTop: '60%',
   }
 })
 

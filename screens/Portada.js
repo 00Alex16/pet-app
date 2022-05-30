@@ -14,7 +14,7 @@ const Portada = (props) => {
         top: 0,}}
       />
         <Image
-          style={{width:200 , height:200,alignSelf:'center', position: 'absolute', justifyContent:'center', top: '10%'}}
+          style={{width:200 , height:200,alignSelf:'center', position: 'absolute', justifyContent:'center', top: '5%'}}
           source={require('./img/logo.png')} />
         <Text style={styles.textoName}>
           Petapp
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontWeight:'bold',
     width: '70%',
-    height: '5%',
+    height: '10%',
     fontSize: 40,
     marginBottom: 20
   }
