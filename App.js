@@ -24,7 +24,7 @@ function MyStack() {
       <Stack.Screen name='Portada' component={Portada} options={{ title: '', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}}/>
       <Stack.Screen name='IniciarSesion' component={IniciarSesion} options={{title: 'Iniciar Sesión',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' }}} />
       <Stack.Screen name='CrearCuenta' component={CrearCuenta} options={{title: 'Crear Cuenta',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' }}} />
-      <Stack.Screen name='Inicio' component={Inicio}/>
+      <Stack.Screen name='Inicio' component={Inicio} options={{ title: 'Inicio', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
       <Stack.Screen name='Clientes' component={Clientes}/>
       <Stack.Screen name='Turnos' component={Turnos}/>
       <Stack.Screen name='Recordatorios' component={Recordatorios}/>

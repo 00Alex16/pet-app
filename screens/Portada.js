@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import { BotonCrearCuenta, BotonIniciarSesion } from './components/BotonesPortada';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -13,6 +13,9 @@ const Portada = (props) => {
         right: 0,
         top: 0,}}
       />
+        <Image
+          style={{width:200 , height:200,alignSelf:'center', position: 'absolute', justifyContent:'center', top: '10%'}}
+          source={require('./img/logo.png')} />
         <Text style={styles.textoName}>
           Petapp
         </Text>

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 
 
 export function BtnClientes(props){
@@ -11,6 +11,9 @@ export function BtnClientes(props){
             <Text style={styles.textoBoton} >
                 { title }
             </Text>
+            <Image
+                style={{width:100 , height:100, alignSelf:'center'}}
+                source={require('../img/clientes.png')} />
         </View>
         </TouchableOpacity>
     );
@@ -25,6 +28,10 @@ export function BtnCalendario(props){
             <Text style={styles.textoBoton} >
                 { title }
             </Text>
+            <Image
+                style={{width:100 , height:100,alignSelf:'center'}}
+                source={require('../img/calendario.png')} 
+            />
         </View>
         </TouchableOpacity>
     );
@@ -38,6 +45,9 @@ export function BtnRecordatorios(props){
             <Text style={styles.textoBoton} >
                 { title }
             </Text>
+            <Image
+                style={{width:100 , height:100,alignSelf:'center'}}
+                source={require('../img/notificaciones.png')} />
         </View>
         </TouchableOpacity>
     );
@@ -51,6 +61,9 @@ export function BtnReferencias(props){
             <Text style={styles.textoBoton} >
                 { title }
             </Text>
+            <Image
+                style={{width:100 , height:100,alignSelf:'center'}}
+                source={require('../img/referencias.png')} />
         </View>
         </TouchableOpacity>
     );
@@ -59,9 +72,8 @@ export function BtnReferencias(props){
 const styles = StyleSheet.create({
 
     button:{
-        //alignItems: 'center',
-        width: '35%',
-        height: 100,
+        width: 150,
+        height: 150,
         justifyContent:'center',
         borderRadius: 30,
         overflow: 'hidden'
@@ -69,7 +81,8 @@ const styles = StyleSheet.create({
     textoBoton:{
         color: '#fff',
         textAlign: 'center',
-        //fontSize: 30
+        alignSelf: 'center',
+        fontSize: 20
     },
     button1:{
         backgroundColor:'#8ecae6',
@@ -77,7 +90,7 @@ const styles = StyleSheet.create({
     },
     button2:{
         backgroundColor:'#219ebc',
-        flex:1
+        flex:1,
     },
     button3:{
         backgroundColor:'#457b9d',
