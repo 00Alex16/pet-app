@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import { View, Text, ScrollView, TextInput, Button } from 'react-native';
+import { View, Text, ScrollView, TextInput, Button, StyleSheet } from 'react-native';
+import { BtnGeneral } from './components/BtnGeneral';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const CrearCuenta = (props) => {
 
@@ -32,56 +34,77 @@ const CrearCuenta = (props) => {
 
   return (
     <ScrollView>
-      <View>
-        <Text>Nombre de la veterinaria</Text>
-        <TextInput
-          //placeholder='Nombre de la veterinaria'
-          onChangeText={(value) => handleChangeText('nombreVeterinaria', value)}
-        />
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(0,184,255,0.8)', 'transparent']}
+        style={{position:'absolute',height: '60%',left: 0,
+        right: 0,
+        top: 0,}}
+      />
+      <View style={styles.container}>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Nombre de la veterinaria'
+            onChangeText={(value) => handleChangeText('nombreVeterinaria', value)}
+          />
+        </View>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Nombre'
+            onChangeText={(value) => handleChangeText('nombre', value)}
+          />
+        </View>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Apellido'
+            onChangeText={(value) => handleChangeText('apellido', value)}
+          />
+        </View>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Telefono'
+            keyboardType='numeric'
+            onChangeText={(value) => handleChangeText('telefono', value)}
+          />
+        </View>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Correo electrónico'
+            keyboardType='email-address'
+            onChangeText={(value) => handleChangeText('correo', value)}
+          />
+        </View>
+        <View>
+          <TextInput style={styles.textos}
+            placeholder='Contraseña'
+            secureTextEntry={true}
+            onChangeText={(value) => handleChangeText('password', value)}
+          />
+        </View>
       </View>
-      <View>
-        <Text>Nombre</Text>
-        <TextInput 
-          //placeholder='Nombre'
-          onChangeText={(value) => handleChangeText('nombre', value)}
-        />
-      </View>
-      <View>
-        <Text>Apellido</Text>
-        <TextInput 
-          //placeholder='Apellido'
-          onChangeText={(value) => handleChangeText('apellido', value)}
-        />
-      </View>
-      <View>
-        <Text>Telefono</Text>
-        <TextInput 
-          //placeholder='Telefono'
-          keyboardType='numeric'
-          onChangeText={(value) => handleChangeText('telefono', value)}
-        />
-      </View>
-      <View>
-        <Text>Correo electrónico</Text>
-        <TextInput 
-          //placeholder='Correo electrónico'
-          keyboardType='email-address'
-          onChangeText={(value) => handleChangeText('correo', value)}
-        />
-      </View>
-      <View>
-        <Text>Contraseña</Text>
-        <TextInput 
-          //placeholder='Contraseña'
-          secureTextEntry={true}
-          onChangeText={(value) => handleChangeText('password', value)}
-        />
-      </View>
-      <View>
-        <Button title='Crear usuario' onPress={() => crearUsuario()}/>
+      <View style={styles.boton}>
+        <BtnGeneral title='Crear usuario' onPress={() => crearUsuario()}/>
       </View>
     </ScrollView>
   )
 }
+
+const styles = StyleSheet.create({
+  textos:{
+    height:30,
+    width: 350,
+    margin:12,
+    borderBottomWidth: 1,
+    padding:20,
+  },
+  container:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    top: '10%',
+  },
+  boton:{
+    top: '20%',
+  }
+})
 
 export default CrearCuenta;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
-import { BtnInicioSesion } from './components/BtnInicioSesion';
+import { BtnGeneral } from './components/BtnGeneral';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const IniciarSesion = (props) => {
 
@@ -24,18 +25,29 @@ const IniciarSesion = (props) => {
   }
 
   return (
-    <View style={styles.container}>
-      <TextInput style={styles.textos}
-        placeholder='Correo electrónico'
-        keyboardType='email-address'
-        onChangeText={(value) => handleChangeText('correo', value)}
+    <View>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(0,184,255,0.8)', 'transparent']}
+        style={{position:'absolute',height: '60%',left: 0,
+        right: 0,
+        top: 0,}}
       />
-      <TextInput style={styles.textos}
-        placeholder='Contraseña'
-        secureTextEntry={true}
-        onChangeText={(value) => handleChangeText('password', value)}
-      />
-      <BtnInicioSesion title='Iniciar sesión' onPress={() => iniciarSesion()}/>
+      <View style={styles.container}>
+        <TextInput style={styles.textos}
+          placeholder='Correo electrónico'
+          keyboardType='email-address'
+          onChangeText={(value) => handleChangeText('correo', value)}
+        />
+        <TextInput style={styles.textos}
+          placeholder='Contraseña'
+          secureTextEntry={true}
+          onChangeText={(value) => handleChangeText('password', value)}
+        />
+      </View>
+      <View style={styles.btn}>
+        <BtnGeneral title='Iniciar sesión' onPress={() => iniciarSesion()} />
+      </View>
     </View>
   )
 }
@@ -51,7 +63,10 @@ const styles = StyleSheet.create({
   container:{
     alignItems: 'center',
     justifyContent: 'center',
-    top: '30%',
+    top: '40%',
+  },
+  btn:{
+    marginTop: '50%',
   }
 })
 

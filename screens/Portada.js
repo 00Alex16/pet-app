@@ -22,9 +22,6 @@ const Portada = (props) => {
         <Text style={styles.texto}>
           toda tu informacion al alcance de tus manos, de manera facil y rapida
         </Text>
-        {/* <Text style={styles.texto}>
-          Con Petapp ser veterinario nunca fue tan facil
-        </Text> */}
         <BotonIniciarSesion style={styles.botones} title='Iniciar sesión' onPress={() => props.navigation.navigate('IniciarSesion')}></BotonIniciarSesion>
         <BotonCrearCuenta title='Crear cuenta' onPress={() => props.navigation.navigate('CrearCuenta')}></BotonCrearCuenta>
     </View>
@@ -55,7 +52,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontWeight:'bold',
     width: '70%',
-    height: '5%'
+    height: '5%',
+    fontSize: 40,
+    marginBottom: 20
   }
 });
 
