@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
     button:{
         alignSelf: 'center',
-        width: '50%',
+        width: '60%',
         justifyContent:'center',
         borderRadius: 30,
         overflow: 'hidden'

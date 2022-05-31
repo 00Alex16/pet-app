@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { BtnCalendario, BtnClientes, BtnRecordatorios, BtnReferencias } from './components/BtnInicio';
 import { LinearGradient } from 'expo-linear-gradient';
+import { BtnGeneral } from './components/BtnGeneral';
+
 
 const Inicio = (props) => {
   return (
@@ -21,7 +23,7 @@ const Inicio = (props) => {
           <BtnClientes title='Clientes' onPress={() => props.navigation.navigate('Clientes')} />
         </View>
         <View style={styles.columnas}>
-          <BtnCalendario title='Calendario' onPress={() => props.navigation.navigate('Calendario')} />
+          <BtnCalendario title='Calendario' onPress={() => props.navigation.navigate('Turnos')} />
         </View>
       </View>
       <View style={styles.container}>
@@ -31,6 +33,9 @@ const Inicio = (props) => {
         <View style={styles.columnas}>
           <BtnReferencias title='Referencias' onPress={() => props.navigation.navigate('Referencias')} />
         </View>
+      </View>
+      <View>
+        <BtnGeneral title='Cerrar Sesión' onPress={() => props.navigation.navigate('Portada')} />
       </View>
     </View>
   )

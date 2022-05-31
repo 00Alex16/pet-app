@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, Button } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 import { ListItem } from "react-native-elements";
+import { BtnGeneral } from '../components/BtnGeneral';
 
 const Clientes = (props) => {
   const [clientes, setclientes] = useState([]);
@@ -31,9 +32,19 @@ const Clientes = (props) => {
           </ListItem>
         )
       })}
-      <Button title='Agregar cliente' onPress={() => props.navigation.navigate('AgregarCliente')}/>
+      <View style={styles.boton}>
+        <BtnGeneral title='Agregar cliente' onPress={() => props.navigation.navigate('AgregarCliente')}/>
+      </View>
     </ScrollView>
   )
 }
+
+const styles = StyleSheet.create({
+  boton:{
+    top: '10%',
+    marginBottom: '10%',
+  }
+})
+
 
 export default Clientes;

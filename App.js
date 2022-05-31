@@ -22,17 +22,17 @@ function MyStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name='Portada' component={Portada} options={{ title: '', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}}/>
-      <Stack.Screen name='IniciarSesion' component={IniciarSesion} options={{title: 'Iniciar Sesión',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' }}} />
-      <Stack.Screen name='CrearCuenta' component={CrearCuenta} options={{title: 'Crear Cuenta',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' }}} />
+      <Stack.Screen name='IniciarSesion' component={IniciarSesion} options={{title: 'Iniciar Sesión',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='CrearCuenta' component={CrearCuenta} options={{title: 'Crear Cuenta',headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
       <Stack.Screen name='Inicio' component={Inicio} options={{ title: 'Inicio', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
-      <Stack.Screen name='Clientes' component={Clientes}/>
-      <Stack.Screen name='Turnos' component={Turnos}/>
-      <Stack.Screen name='Recordatorios' component={Recordatorios}/>
-      <Stack.Screen name='Referencias' component={Referencias}/>
-      <Stack.Screen name='AgregarCliente' component={AgregarCliente}/>
-      <Stack.Screen name='DetallesCliente' component={DetallesCliente}/>
-      <Stack.Screen name='DetallesTurno' component={DetallesTurno}/>
-      <Stack.Screen name='CrearTurno' component={CrearTurno}/>
+      <Stack.Screen name='Clientes' component={Clientes} options={{title: 'xd', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='Turnos' component={Turnos} options={{ title: 'Turnos', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='Recordatorios' component={Recordatorios} options={{ title: 'Recordatorios', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='Referencias' component={Referencias} options={{ title: 'Referencias (Sintomatologías)', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='AgregarCliente' component={AgregarCliente} options={{ title: 'Agregar Cliente', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
+      <Stack.Screen name='DetallesCliente' component={DetallesCliente} options={{ title: 'Información Cliente', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}}/>
+      <Stack.Screen name='DetallesTurno' component={DetallesTurno} options={{ title: 'Información del Turno', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}}/>
+      <Stack.Screen name='CrearTurno' component={CrearTurno} options={{ title: 'Crear Turno', headerStyle: { backgroundColor: 'rgba(0,184,255,0.8)' },}} />
     </Stack.Navigator>
   )
 }

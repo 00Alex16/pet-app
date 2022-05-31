@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, ScrollView, TextInput, Button, StyleSheet } from 'react-native';
+import { View, ScrollView, TextInput, StyleSheet, Text } from 'react-native';
 import { BtnGeneral } from './components/BtnGeneral';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -9,6 +9,7 @@ const CrearCuenta = (props) => {
     nombreVeterinaria: '',
     nombre: '',
     apellido: '',
+    cedula: '',
     telefono: '',
     correo: '',
     password: ''
@@ -42,41 +43,49 @@ const CrearCuenta = (props) => {
         top: 0,}}
       />
       <View style={styles.container}>
-        <View>
-          <TextInput style={styles.textos}
-            placeholder='Nombre de la veterinaria'
+        <View style={styles.ancho}>
+          <Text>Nombre de la Veterinaria</Text>
+          <TextInput
             onChangeText={(value) => handleChangeText('nombreVeterinaria', value)}
           />
         </View>
-        <View>
-          <TextInput style={styles.textos}
+        <View style={styles.ancho}>
+          <Text>Nombre</Text>
+          <TextInput
             placeholder='Nombre'
             onChangeText={(value) => handleChangeText('nombre', value)}
           />
         </View>
-        <View>
-          <TextInput style={styles.textos}
-            placeholder='Apellido'
+        <View style={styles.ancho}>
+          <Text>Apellido</Text>
+          <TextInput
             onChangeText={(value) => handleChangeText('apellido', value)}
           />
         </View>
-        <View>
-          <TextInput style={styles.textos}
-            placeholder='Telefono'
+        <View style={styles.ancho}>
+          <Text>Cédula</Text>
+          <TextInput
+            keyboardType='numeric'
+            onChangeText={(value) => handleChangeText('cedula', value)}
+          />
+        </View>
+        <View style={styles.ancho}>
+          <Text>Telefono</Text>
+          <TextInput
             keyboardType='numeric'
             onChangeText={(value) => handleChangeText('telefono', value)}
           />
         </View>
-        <View>
-          <TextInput style={styles.textos}
-            placeholder='Correo electrónico'
+        <View style={styles.ancho}>
+          <Text>Correo electrónico</Text>
+          <TextInput
             keyboardType='email-address'
             onChangeText={(value) => handleChangeText('correo', value)}
           />
         </View>
-        <View>
-          <TextInput style={styles.textos}
-            placeholder='Contraseña'
+        <View style={styles.ancho}>
+          <Text>Contraseña</Text>
+          <TextInput
             secureTextEntry={true}
             onChangeText={(value) => handleChangeText('password', value)}
           />
@@ -90,16 +99,14 @@ const CrearCuenta = (props) => {
 }
 
 const styles = StyleSheet.create({
-  textos:{
-    width: 350,
-    margin:12,
+  ancho:{
+    width: '80%',
     borderBottomWidth: 1,
-    padding:20,
+    margin:10,
   },
   container:{
     alignItems: 'center',
     justifyContent: 'center',
-    //top: '10%',
   },
   boton:{
     top: 40,
